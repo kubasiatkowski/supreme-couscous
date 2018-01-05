@@ -29,6 +29,7 @@ public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, IColle
         log.Info($"Adding Person entity {name}");
             tableBinding.Add(
                 new SpacePerson() {  
+                    RowKey = 1,
                     Name = name,
                     Fruit = fruit }
                 );
@@ -52,6 +53,8 @@ public class Person
 
 public class SpacePerson
 {
+    public string PartitionKey { get; set; }
+    public string RowKey { get; set; }
     public string Name { get; set; }
     public string Fruit { get; set; }
 }
