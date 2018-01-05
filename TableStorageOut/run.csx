@@ -1,6 +1,6 @@
 using System.Net;
 
-public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, ICollector<Person> tableBinding, TraceWriter log)
+public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, ICollector<SpacePerson> tableBinding, TraceWriter log)
 {
     log.Info("C# HTTP trigger function processed a request.");
 
