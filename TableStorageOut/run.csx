@@ -30,7 +30,7 @@ public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, IColle
             tableBinding.Add(
                 new SpacePerson() {  
                     RowKey = name,
-                    PartitionKey = "testpart"
+                    PartitionKey = "testpart",
                     Name = name,
                     Fruit = fruit }
                 );
