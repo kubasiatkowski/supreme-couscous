@@ -27,13 +27,13 @@ public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, IColle
         t.name = name;
         
         log.Info($"Adding Person entity {name}");
-            tableBinding.Add(
-                new SpacePerson() {  
-                    RowKey = name,
-                    PartitionKey = "testpart",
-                    Name = name,
-                    Fruit = fruit }
-                );
+        tableBinding.Set(
+            new SpacePerson() {  
+                RowKey = name,
+                PartitionKey = "testpart",
+                Name = name,
+                Fruit = fruit }
+        );
 
         return req.CreateResponse(HttpStatusCode.OK, t); //"Hello " + name)
     };
