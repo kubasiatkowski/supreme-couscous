@@ -5,6 +5,12 @@ public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceW
 {
     log.Info("C# HTTP trigger function processed a request.");
 
+     var tokenProvider = new AzureServiceTokenProvider();
+     string accessToken = await tokenProvider.GetAccessTokenAsync(”https://database.windows.net/”);
+     log.Info($"accessToken: {accessToken}");
+
+
+    
     // parse query parameter
     string name = req.GetQueryNameValuePairs()
         .FirstOrDefault(q => string.Compare(q.Key, "name", true) == 0)
