@@ -1,4 +1,5 @@
 using System.Net;
+using Microsoft.Azure.Services.AppAuthentication;
 
 public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceWriter log)
 {
