@@ -5,9 +5,9 @@ public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceW
 {
     log.Info("C# HTTP trigger function processed a request.");
 
-     var tokenProvider = new AzureServiceTokenProvider();
+   /*  var tokenProvider = new AzureServiceTokenProvider();
      string accessToken = await tokenProvider.GetAccessTokenAsync(”https://database.windows.net/”);
-     log.Info($"accessToken: {accessToken}");
+     log.Info($"accessToken: {accessToken}");*/
 
 
     
