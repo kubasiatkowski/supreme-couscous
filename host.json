@@ -1,3 +1,5 @@
-"identity": {
+{
+    "identity": {
     "type": "SystemAssigned"
-} 
+    } 
+}
